@@ -59,6 +59,21 @@
         <img class="title" src="imgs/popcat.svg" alt="POPCAT">
         <div class="cat-img" id="p">0</div>
     </div>
+
+    <script>
+        let count = 0;
+        let catImg = document.getElementById('p');
+        let audio = new Audio('audio/popcat.mp3'); <!--新增音效-->
+
+        function add() {
+            count++;    
+            console.log(count);
+            catImg.innerText = count; <!--讓計數器隨滑鼠點擊更新數字-->
+            audio.play(); <!--播放音效-->
+        }
+        document.addEventListener('mousedown',add); <!--新增計數器，點擊滑鼠計數-->
+    </script>
+
 </body>
 
 </html>
