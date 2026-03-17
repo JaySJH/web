@@ -70,8 +70,13 @@
             audio.play(); <!--播放音效-->    
             console.log(count);
             catImg.innerText = count; <!--讓計數器隨滑鼠點擊更新數字-->
+            catImg.id = 'op'; <!--點擊後切換圖片-->
+        }
+        function close(){
+            catImg.id = 'p'; <!--放開後切換回圖片-->
         }
         document.addEventListener('mousedown',add); <!--新增計數器，點擊滑鼠計數-->
+        document.addEventListener('mouseup',close); <!--放開滑鼠切換圖片-->
     </script>
 
 </body>
