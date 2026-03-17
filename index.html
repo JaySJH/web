@@ -63,13 +63,13 @@
     <script>
         let count = 0;
         let catImg = document.getElementById('p');
-        let audio = new Audio('audio/popcat.mp3'); <!--新增音效-->
+        let audio = new Audio('pops/pop1.mp3'); <!--新增音效-->
 
         function add() {
-            count++;    
+            count++;
+            audio.play(); <!--播放音效-->    
             console.log(count);
             catImg.innerText = count; <!--讓計數器隨滑鼠點擊更新數字-->
-            audio.play(); <!--播放音效-->
         }
         document.addEventListener('mousedown',add); <!--新增計數器，點擊滑鼠計數-->
     </script>
